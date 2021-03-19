@@ -1,4 +1,13 @@
+import socket
 
+def test_connection():
+    try:
+        socket.create_connection(("Google.com", 80))
+        return True
+    except OSError:
+        return False
+
+print(test_connection())
 
 import os
 
@@ -12,4 +21,6 @@ elif user_input == "N":
     print("Okay.")
 else:
     print("Please enter 'Y' or 'N'")
+
+
 
