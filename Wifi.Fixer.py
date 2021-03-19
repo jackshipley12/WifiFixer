@@ -1,14 +1,15 @@
-# we need to know everything
-# terminal cod: sudo service network-manager restart
 
-#import os
-#os.system("sudo service network-manager restart")
 
-connection_status = input("Do you want to rest internet? Please answer with 'Y' or 'N': ")
-print(connection_status)
+import os
 
-user_response = input()
+user_input = input("Do you want to rest internet? Please answer with 'Y' or 'N': ")
+print(user_input)
 
-if user_respone == 'Y':
-    import os
+if user_input == "Y":
     os.system("sudo service network-manager restart")
+    print("Wifi Reset.")
+elif user_input == "N":
+    print("Okay.")
+else:
+    print("Please enter 'Y' or 'N'")
+
